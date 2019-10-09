@@ -185,6 +185,7 @@ class Stroop {
     let word = jQuery('.word');
     word.text('+');
     setTimeout(function() {
+      console.log("Displaying " + self.words[self.currentWord]);
       word.text(self.words[self.currentWord]).css({'color':self.colors[self.currentColor]});
     }, 500);
   }
