@@ -181,7 +181,6 @@ class Stroop {
     this.count++;
     this.displayTime = new Date().getTime();
     let self = this;
-    jQuery('#stroop').html($('<h1>', {class: 'word'}));
     let word = jQuery('.word');
     word.text('+');
     setTimeout(function() {
