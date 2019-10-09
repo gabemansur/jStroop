@@ -98,6 +98,7 @@ class Stroop {
 
   start() {
     self = this;
+    console.log("Stroop is starting");
     setTimeout(function() {
       self.next();
     }, 1500);
