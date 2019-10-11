@@ -182,7 +182,7 @@ class Stroop {
     this.displayTime = new Date().getTime();
     let self = this;
     let word = jQuery('.word');
-    word.text('+');
+    word.text('+').css({'color': '#000'});
     setTimeout(function() {
       console.log("Displaying " + self.words[self.currentWord]);
       word.text(self.words[self.currentWord]).css({'color':self.colors[self.currentColor]});
@@ -190,8 +190,8 @@ class Stroop {
   }
 
   end() {
-    document.write(JSON.stringify(this.responses));
-    console.log(JSON.stringify(this.responses));
+    let results = JSON.stringify(this.responses);
+    jQuery( document ).trigger( "jStroopEnd", [ results ] );
   }
 
 }

@@ -19,6 +19,10 @@
           s.getResponse(e);
         });
         s.start();
+        jQuery(document).on('jStroopEnd', function(event, results) {
+          alert('Finished!');
+          console.log(results);
+        })
       });
     </script>
     <div id="key">
